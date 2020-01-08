@@ -4,13 +4,13 @@
 #
 Name     : perl-X11-IdleTime
 Version  : 0.09
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/A/AW/AWENDT/X11-IdleTime-0.09.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/A/AW/AWENDT/X11-IdleTime-0.09.tar.gz
 Summary  : Get the idle time of X11
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-X11-IdleTime-lib = %{version}-%{release}
+Requires: perl-X11-IdleTime-perl = %{version}-%{release}
 Requires: perl(Inline)
 BuildRequires : buildreq-cpan
 BuildRequires : libX11
@@ -28,7 +28,6 @@ X11::IdleTime has one sub routine, GetIdleTime() which returns the number of sec
 %package dev
 Summary: dev components for the perl-X11-IdleTime package.
 Group: Development
-Requires: perl-X11-IdleTime-lib = %{version}-%{release}
 Provides: perl-X11-IdleTime-devel = %{version}-%{release}
 Requires: perl-X11-IdleTime = %{version}-%{release}
 
@@ -36,16 +35,18 @@ Requires: perl-X11-IdleTime = %{version}-%{release}
 dev components for the perl-X11-IdleTime package.
 
 
-%package lib
-Summary: lib components for the perl-X11-IdleTime package.
-Group: Libraries
+%package perl
+Summary: perl components for the perl-X11-IdleTime package.
+Group: Default
+Requires: perl-X11-IdleTime = %{version}-%{release}
 
-%description lib
-lib components for the perl-X11-IdleTime package.
+%description perl
+perl components for the perl-X11-IdleTime package.
 
 
 %prep
 %setup -q -n X11-IdleTime-0.09
+cd %{_builddir}/X11-IdleTime-0.09
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -81,12 +82,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/X11/IdleTime.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/X11::IdleTime.3
 
-%files lib
+%files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/X11/IdleTime/IdleTime.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/X11/IdleTime.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/X11/IdleTime/IdleTime.so
