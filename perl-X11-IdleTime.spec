@@ -4,7 +4,7 @@
 #
 Name     : perl-X11-IdleTime
 Version  : 0.09
-Release  : 5
+Release  : 6
 URL      : https://cpan.metacpan.org/authors/id/A/AW/AWENDT/X11-IdleTime-0.09.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/A/AW/AWENDT/X11-IdleTime-0.09.tar.gz
 Summary  : Get the idle time of X11
@@ -89,5 +89,5 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/x86_64-linux-thread-multi/X11/IdleTime.pm
-/usr/lib/perl5/vendor_perl/5.30.3/x86_64-linux-thread-multi/auto/X11/IdleTime/IdleTime.so
+/usr/lib/perl5/vendor_perl/5.32.1/x86_64-linux-thread-multi/X11/IdleTime.pm
+/usr/lib/perl5/vendor_perl/5.32.1/x86_64-linux-thread-multi/auto/X11/IdleTime/IdleTime.so
