@@ -4,7 +4,7 @@
 #
 Name     : perl-X11-IdleTime
 Version  : 0.09
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/A/AW/AWENDT/X11-IdleTime-0.09.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/A/AW/AWENDT/X11-IdleTime-0.09.tar.gz
 Summary  : Get the idle time of X11
