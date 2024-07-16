@@ -1,3 +1,4 @@
 0.09
+perl(Digest::MD5)
 perl(Inline::MakeMaker)
 perl(Parse::RecDescent)
